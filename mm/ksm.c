@@ -102,7 +102,7 @@ static unsigned int aksm_minfree_warn = 30720; //120MB
 static unsigned int aksm_minfree_critical = 10240; //40MB
 
 unsigned int  check_mem_status(void);
-extern int get_minfree_high_value(void);
+//extern int get_minfree_high_value(void);
 void set_AKSM_level(void);
 #endif  // CONFIG_ADAPTIVE_KSM
 
@@ -1866,7 +1866,7 @@ static void AKSM_show_stable_pages(void) {}
 
 void set_AKSM_level(void)
 {
-	aksm_minfree_critical = get_minfree_high_value() + global_page_state(NR_SHMEM) + total_swapcache_pages();
+	aksm_minfree_critical = global_page_state(NR_SHMEM) + total_swapcache_pages();
 	aksm_minfree_warn = aksm_minfree_critical * 2;
 }
 

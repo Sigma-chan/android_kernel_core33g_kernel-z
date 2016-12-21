@@ -1,1 +1,1 @@
-make CORE_defconfig && make -j2
+make clean && make z_defconfig && make -j2

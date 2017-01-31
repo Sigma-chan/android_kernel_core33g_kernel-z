@@ -2045,7 +2045,7 @@ static int __init cpufreq_gov_dbs_init(void)
 	g_sd_tuners = kzalloc(sizeof(struct sd_dbs_tuners), GFP_KERNEL);
 
 
-	if(input_register_handler(&dbs_input_handler))
+	if(input_register_handler)
 	{
 		pr_err("[DVFS] input_register_handler failed\n");
 	}
@@ -2068,7 +2068,7 @@ static void __exit cpufreq_gov_dbs_exit(void)
 	platform_driver_unregister(&cpu_cooling_driver);
 #endif
 
-	input_unregister_handler(&dbs_input_handler);
+	input_unregister_handler;
 
 }
 

@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/arm 3.10.17 Kernel Configuration
+# Linux/arm 3.10.102 Kernel Configuration
 #
 CONFIG_ARM=y
 CONFIG_ARM_HAS_SG_CHAIN=y
@@ -525,9 +525,9 @@ CONFIG_ATAGS=y
 CONFIG_ZBOOT_ROM_TEXT=0x0
 CONFIG_ZBOOT_ROM_BSS=0x0
 # CONFIG_ARM_APPENDED_DTB is not set
-CONFIG_CMDLINE="init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M"
-CONFIG_CMDLINE_FROM_BOOTLOADER=y
-# CONFIG_CMDLINE_EXTEND is not set
+CONFIG_CMDLINE="androidboot.hardware=sc8830"
+# CONFIG_CMDLINE_FROM_BOOTLOADER is not set
+CONFIG_CMDLINE_EXTEND=y
 # CONFIG_CMDLINE_FORCE is not set
 # CONFIG_XIP_KERNEL is not set
 # CONFIG_KEXEC is not set
@@ -3320,7 +3320,7 @@ CONFIG_ZRAM=y
 CONFIG_ZRAM_LZ4_COMPRESS=y
 CONFIG_ZRAM_ZLIB_COMPRESS=y
 # CONFIG_ZBUD is not set
-CONFIG_ZSWAP=y
+# CONFIG_ZSWAP is not set
 CONFIG_ZPOOL=y
 # CONFIG_RUNTIME_COMPCACHE is not set
 # CONFIG_KSWAPD_NOSWAP is not set
